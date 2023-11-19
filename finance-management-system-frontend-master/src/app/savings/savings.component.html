@@ -1,0 +1,11 @@
+<app-categories></app-categories>
+
+<div *ngIf="savingsAmount !== undefined" class="savingsbox">
+  <h1 class="display-4">Total Savings</h1>
+  <p class="lead">Your Total Savings:</p>
+  <div class="card bg-light mb-3" style="max-width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">₹{{ savingsAmount }}</h5>
+    </div>
+  </div>
+</div>

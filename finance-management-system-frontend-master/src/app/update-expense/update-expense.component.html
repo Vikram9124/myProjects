@@ -1,0 +1,48 @@
+<app-categories></app-categories>
+<div class="container">
+  <h2>Update your Expense and Date</h2>
+  <form (ngSubmit)="displayUpdatedExpense()">
+    <!-- Income Input -->
+    <div class="form-group">
+      <label for="amount">Expense (IN):</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="expense.name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="amount">Expense (IN):</label>
+      <input
+        type="number"
+        class="form-control"
+        id="amount"
+        name="amount"
+        [(ngModel)]="expense.amount"
+        required
+      />
+    </div>
+
+    <!-- Date Input -->
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input
+        type="date"
+        class="form-control"
+        id="date"
+        name="date"
+        [(ngModel)]="expense.date"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+  <br />
+  <button class="btn btn-info" (click)="goToExpenseList()">
+    Show Expenses Details
+  </button>
+</div>

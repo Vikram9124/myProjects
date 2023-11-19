@@ -1,0 +1,27 @@
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line {
+  content: " ";
+  width: 10rem;
+  height: 5px;
+  background: #0a0a0a;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-login {
+  background: #0069c0;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10%;
+}
+.box {
+  background-color: burlywood;
+  border-radius: 10px;
+}

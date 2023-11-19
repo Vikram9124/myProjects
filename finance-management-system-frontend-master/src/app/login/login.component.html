@@ -1,0 +1,41 @@
+<br /><br />
+<div class="container-sm box">
+  <h1 class="h-100 d-flex align-items-center justify-content-center text-dark">
+    USER LOGIN PAGE
+  </h1>
+  <hr class="line" />
+  <form (ngSubmit)="userLogin()" class="form">
+    <div class="maindiv">
+      <div class="col-md-5">
+        <label for="exampleFormControlInput1" class="form-label"
+          >User Name</label
+        >
+        <input
+          type="text"
+          [(ngModel)]="user.userName"
+          class="form-control"
+          id="userName"
+          name="userName"
+          placeholder="enter your name"
+        />
+      </div>
+      <br />
+      <div class="col-md-5">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="user.userPassword"
+          class="form-control"
+          id="userPassword"
+          name="userPassword"
+          placeholder="enter your password"
+        />
+      </div>
+      <br />
+      <button type="submit" class="btn-login">Login</button>
+    </div>
+    
+  </form>
+  
+  
+</div>

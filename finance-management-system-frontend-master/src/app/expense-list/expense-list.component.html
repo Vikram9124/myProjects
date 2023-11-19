@@ -1,0 +1,43 @@
+<app-categories></app-categories>
+<div class="container">
+  <h2>Expenses History</h2>
+  <br />
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th>Expense ID</th> -->
+        <th>Expenditure</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Function</th>
+        <th>Function</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let expense of expenseData">
+        <!-- <td>{{ expense.id }}</td> -->
+        <td>{{expense.name}}</td>
+        <td>{{ expense.amount }}</td>
+        <td>{{ expense.date }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-info"
+            (click)="updateExpense(expense.id)"
+          >
+            Update
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteExpense(expense.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,68 @@
+<app-categories></app-categories>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Your Investments</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Investment Name</th>
+            <th>Amount</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let investment of investments">
+            <td>{{ investment.name }}</td>
+            <td>${{ investment.amount }}</td>
+            <td>
+              <button
+                (click)="updateInvestment(investment.id)"
+                class="btn btn-primary"
+              >
+                Update
+              </button>
+            </td>
+            <td>
+              <button
+                (click)="deleteInvestment(investment.id)"
+                class="btn btn-danger"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h2>Add Investment</h2>
+      <!-- <form (submit)="addInvestment()"> -->
+      <div class="form-group">
+        <label for="investmentName">Investment Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="investmentName"
+          [(ngModel)]="newInvestment.name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="investmentAmount">Investment Amount</label>
+        <input
+          type="number"
+          class="form-control"
+          id="investmentAmount"
+          [(ngModel)]="newInvestment.amount"
+          required
+        />
+      </div>
+
+      <button type="submit" (click)="addInvestment()" class="btn btn-primary">
+        Add Investment
+      </button>
+      <!-- </form> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<app-categories></app-categories>
+<br />
+<br />
+<div class="container">
+  <h2>Income History</h2><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th>Income ID</th> -->
+        <th>Income Details</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Function1</th>
+        <th>Function2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let income of incomeData">
+        <!-- <td>{{ income.id }}</td> -->
+        <td>{{ income.name }}</td>
+        <td>{{ income.amount }}</td>
+        <td>{{ income.date }}</td>
+        <td>
+          <button class="btn btn-info" (click)="updateIncome(income.id)">
+            Update
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteIncome(income.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
